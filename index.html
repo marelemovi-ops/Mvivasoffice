@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mvivas Office: preparación de impuestos, asistencia administrativa con formularios migratorios, creación de negocios y documentos bilingües.">
+<title>Mvivas Office | Impuestos, documentos y servicios administrativos</title>
+<style>
+:root{--navy:#173253;--blue:#2869e8;--light:#f4f7fb;--gold:#d4a64a;--text:#182230;--muted:#617083;--white:#fff;--line:#dfe6ef}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}
+.container{width:min(1120px,calc(100% - 36px));margin:auto}.section{padding:78px 0}.soft{background:var(--light)}
+.topbar{background:#0c1c31;color:#e8f0fb;padding:8px 0;font-size:14px}.topbar .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+header{position:sticky;top:0;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:10}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;font-size:22px;color:var(--navy)}.logo span{display:inline-grid;place-items:center;width:43px;height:43px;border-radius:13px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;margin-right:9px}
+.links{display:flex;gap:23px;font-weight:700;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:11px;font-weight:800;border:0;cursor:pointer}
+.primary{background:var(--blue);color:#fff}.outline{border:1px solid rgba(255,255,255,.55);color:#fff}.white{background:#fff;color:var(--navy)}
+.hero{padding:95px 0;color:#fff;background:radial-gradient(circle at 85% 15%,rgba(40,105,232,.7),transparent 33%),linear-gradient(135deg,#0c1c31,#173253)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}.hero h1{font-size:clamp(43px,6vw,72px);line-height:1.03;margin:15px 0 22px;letter-spacing:-2px}.hero h1 em{font-style:normal;color:#b5d0ff}
+.hero p{color:#dce8f8;font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.tag{display:inline-block;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.12);font-size:12px;font-weight:900;letter-spacing:1px}
+.hero-card{background:#fff;color:var(--text);padding:27px;border-radius:23px;box-shadow:0 24px 60px rgba(0,0,0,.25)}.hero-card h3{color:var(--navy);font-size:24px;margin:0}.mini{padding:14px 0;border-top:1px solid var(--line)}.mini strong{display:block;color:var(--navy)}.mini small{color:var(--muted)}
+.eyebrow{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:12px}.title{font-size:clamp(34px,4vw,48px);line-height:1.1;color:var(--navy);margin:10px 0 16px}.intro{max-width:760px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:35px}.card{border:1px solid var(--line);border-radius:19px;padding:24px;background:#fff;box-shadow:0 8px 25px rgba(12,28,49,.05)}.card h3{color:var(--navy);margin:8px 0}.card p,.card li{color:var(--muted);font-size:14px}.card ul{padding-left:19px}.icon{font-size:29px}
+.notice{margin-top:25px;padding:17px 19px;border-left:4px solid var(--gold);background:#fff8e9;border-radius:10px;color:#624b20;font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-top:34px}.step{background:#fff;border:1px solid var(--line);padding:23px;border-radius:17px}.num{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:#fff;font-weight:900}.step h3{color:var(--navy)}
+.faq{max-width:850px;margin:30px auto}details{border-bottom:1px solid var(--line);padding:17px 0}summary{font-weight:800;color:var(--navy);cursor:pointer}
+.contact{display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;background:var(--navy);color:#fff;padding:33px;border-radius:25px}.contact h2{font-size:41px;line-height:1.1}.contact p{color:#dce8f8}.info{display:grid;gap:12px;margin-top:22px}
+form{background:#fff;color:var(--text);padding:25px;border-radius:19px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:13px}label{display:block;color:var(--navy);font-weight:800;font-size:13px;margin-bottom:5px}input,select,textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:9px;font:inherit}textarea{min-height:115px}.full{width:100%}.note{font-size:11px;color:var(--muted)}
+footer{background:#091627;color:#b8c8dc;padding:42px 0 22px}footer strong{color:#fff}.legal{border-top:1px solid rgba(255,255,255,.13);margin-top:25px;padding-top:18px;font-size:12px}
+.float{position:fixed;right:18px;bottom:18px;background:#25d366;color:#fff;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:26px;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+@media(max-width:860px){.hero-grid,.contact{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.links{display:none}}
+@media(max-width:580px){.cards,.steps,.grid2{grid-template-columns:1fr}.section{padding:60px 0}.nav .primary{display:none}.hero{padding:70px 0}.contact{padding:19px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>Atención en español e inglés · Presencial y virtual</span><span>Herriman, Utah · Con cita previa</span></div></div>
+<header><nav class="container nav"><a class="logo" href="#inicio"><span>MV</span>Mvivas Office</a><div class="links"><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></div><a class="btn primary" href="#contacto">Solicitar cita</a></nav></header>
+<main>
+<section class="hero" id="inicio"><div class="container hero-grid"><div><span class="tag">Tu oficina de confianza</span><h1>Soluciones claras para tus <em>impuestos, documentos y negocio.</em></h1><p>En Mvivas Office te ayudamos a preparar y organizar trámites importantes con atención personalizada, comunicación sencilla y servicio bilingüe.</p><div class="actions"><a class="btn white" href="#servicios">Ver servicios</a><a class="btn outline" href="https://wa.me/13854921551">Hablar por WhatsApp</a></div></div><aside class="hero-card"><h3>¿En qué podemos ayudarte?</h3><p style="color:#617083">Solicita información sobre el servicio que necesitas.</p><div class="mini"><strong>🧾 Preparación de impuestos</strong><small>W-2, 1099, trabajadores independientes y pequeños negocios.</small></div><div class="mini"><strong>📄 Formularios migratorios</strong><small>Asistencia administrativa y organización de documentos.</small></div><div class="mini"><strong>🏢 Creación de negocios</strong><small>LLC, DBA, EIN y organización inicial.</small></div><div class="mini"><strong>✍️ Cartas y documentos</strong><small>Redacción, formularios, currículos y apoyo bilingüe.</small></div></aside></div></section>
+
+<section class="section" id="servicios"><div class="container"><span class="eyebrow">Servicios</span><h2 class="title">Todo lo que Mvivas Office puede ofrecerte</h2><p class="intro">Servicios prácticos para familias, trabajadores independientes y emprendedores que necesitan preparar documentos con orden, claridad y atención al detalle.</p>
+<div class="cards">
+<article class="card"><div class="icon">🧾</div><h3>Preparación de impuestos</h3><p>Preparación y presentación electrónica según la información del cliente.</p><ul><li>Declaraciones con W-2 y 1099</li><li>Uber, Lyft, DoorDash, Amazon Flex y otros</li><li>Dependientes y créditos tributarios elegibles</li><li>Declaraciones federales y estatales</li><li>Organización de gastos del negocio</li><li>Asistencia administrativa con cartas del IRS</li></ul></article>
+<article class="card"><div class="icon">🗂️</div><h3>Formularios migratorios</h3><p>Asistencia no legal para completar formularios siguiendo las instrucciones del cliente.</p><ul><li>Organización de paquetes y evidencias</li><li>Residencia y peticiones familiares</li><li>Permisos de trabajo y viaje</li><li>Renovación o reemplazo de documentos</li><li>Carga de documentos en cuentas en línea</li><li>Cartas explicativas administrativas</li></ul></article>
+<article class="card"><div class="icon">🏢</div><h3>Creación de negocios</h3><p>Apoyo administrativo para comenzar y mantener un negocio organizado.</p><ul><li>Registro de LLC y DBA</li><li>Solicitud de EIN</li><li>Reportes anuales</li><li>Orientación administrativa sobre licencias</li><li>Organización básica de ingresos y gastos</li><li>Formularios W-9 y 1099</li></ul></article>
+<article class="card"><div class="icon">✍️</div><h3>Cartas y documentos</h3><p>Redacción, revisión y formato profesional de documentos.</p><ul><li>Cartas formales y declaraciones</li><li>Contratos y acuerdos básicos</li><li>Currículos y cartas de presentación</li><li>Solicitudes y formularios en línea</li><li>Organización de expedientes</li><li>Combinación y formato de PDF</li></ul></article>
+<article class="card"><div class="icon">🌐</div><h3>Servicios bilingües</h3><p>Apoyo para presentar comunicaciones claramente en español o inglés.</p><ul><li>Traducciones generales no certificadas</li><li>Cartas bilingües</li><li>Ayuda con solicitudes en inglés</li><li>Revisión de ortografía y formato</li><li>Listas de documentos</li><li>Explicaciones administrativas sencillas</li></ul></article>
+<article class="card"><div class="icon">📅</div><h3>Asistencia administrativa</h3><p>Apoyo presencial o remoto para tareas que requieren organización y seguimiento.</p><ul><li>Creación de cuentas y citas</li><li>Consulta de estatus en portales públicos</li><li>Escaneo, impresión y envío</li><li>Preparación de paquetes de correo</li><li>Organización de requisitos</li><li>Apoyo para familias y negocios</li></ul></article>
+</div><div class="notice"><strong>Aviso:</strong> Mvivas Office no es un bufete de abogados y no ofrece asesoría legal ni representación ante tribunales. Los servicios migratorios se limitan a asistencia administrativa y preparación de documentos conforme a la información e instrucciones del cliente.</div></div></section>
+
+<section class="section soft" id="proceso"><div class="container"><span class="eyebrow">Proceso sencillo</span><h2 class="title">Cómo trabajamos</h2><div class="steps"><article class="step"><span class="num">1</span><h3>Cuéntanos tu necesidad</h3><p>Escríbenos por WhatsApp o completa el formulario.</p></article><article class="step"><span class="num">2</span><h3>Recibe tu lista</h3><p>Te indicamos documentos, alcance y costo antes de comenzar.</p></article><article class="step"><span class="num">3</span><h3>Preparación y revisión</h3><p>Organizamos la información y revisamos los datos contigo.</p></article><article class="step"><span class="num">4</span><h3>Entrega y seguimiento</h3><p>Recibes copias e instrucciones administrativas para continuar.</p></article></div></div></section>
+
+<section class="section" id="preguntas"><div class="container"><span class="eyebrow">Preguntas frecuentes</span><h2 class="title">Antes de comenzar</h2><div class="faq">
+<details><summary>¿Atienden clientes fuera de Utah?</summary><p>Muchos servicios pueden realizarse virtualmente. La disponibilidad depende del trámite y sus requisitos.</p></details>
+<details><summary>¿Mvivas Office ofrece asesoría legal?</summary><p>No. No somos un bufete de abogados, no seleccionamos estrategias legales y no representamos clientes en tribunales.</p></details>
+<details><summary>¿Qué debo enviar para recibir un precio?</summary><p>Una descripción del servicio y, cuando corresponda, copia de la notificación recibida. No envíes información altamente sensible mediante formularios públicos.</p></details>
+<details><summary>¿El precio incluye tarifas gubernamentales?</summary><p>No, salvo que se indique expresamente por escrito. Los honorarios del servicio son separados de las tarifas de agencias, correo y terceros.</p></details>
+</div></div></section>
+
+<section class="section soft" id="contacto"><div class="container"><div class="contact"><div><span class="tag">Contáctanos</span><h2>Comienza con una consulta</h2><p>Cuéntanos qué necesitas y te enviaremos los próximos pasos.</p><div class="info"><strong>📱 WhatsApp: (385) 492-1551</strong><strong>✉️ Mvivasoffice@gmail.com</strong><strong>📍 Herriman, Utah · Atención con cita</strong></div></div>
+<form id="contactForm"><div class="grid2"><div class="field"><label>Nombre completo</label><input id="name" required></div><div class="field"><label>Teléfono</label><input id="phone" required></div></div><div class="field"><label>Servicio</label><select id="service" required><option value="">Selecciona una opción</option><option>Preparación de impuestos</option><option>Formularios migratorios</option><option>Creación de negocio</option><option>Cartas o documentos</option><option>Servicio bilingüe</option><option>Asistencia administrativa</option><option>Otro</option></select></div><div class="field"><label>Describe brevemente tu solicitud</label><textarea id="message" required></textarea></div><button class="btn primary full" type="submit">Enviar por WhatsApp</button><p class="note">No incluyas números completos de Seguro Social, contraseñas ni información bancaria.</p></form>
+</div></div></section>
+</main>
+<footer><div class="container"><strong>Mvivas Office</strong><p>Servicios administrativos bilingües para impuestos, formularios, documentos y pequeños negocios.</p><div class="legal"><p><strong>Aviso legal:</strong> Mvivas Office presta servicios administrativos y de preparación de documentos. No es un bufete de abogados y no ofrece asesoría legal. El cliente debe revisar y confirmar que toda la información sea completa y correcta antes de cualquier presentación.</p><p><strong>Privacidad:</strong> La información enviada se utiliza para responder a la solicitud. Solicita un método seguro antes de compartir documentos confidenciales.</p><p>© <span id="year"></span> Mvivas Office. Todos los derechos reservados.</p></div></div></footer>
+<a class="float" href="https://wa.me/13854921551" aria-label="WhatsApp">☎</a>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+const text=`Hola, Mvivas Office. Deseo solicitar información.
+
+Nombre: ${document.getElementById("name").value}
+Teléfono: ${document.getElementById("phone").value}
+Servicio: ${document.getElementById("service").value}
+Solicitud: ${document.getElementById("message").value}`;
+window.open("https://wa.me/13854921551?text="+encodeURIComponent(text),"_blank");
+});
+</script>
+</body>
+</html>
